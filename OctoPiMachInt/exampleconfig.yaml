@@ -1,0 +1,94 @@
+accessControl:
+  salt: KkLdMpg8UA0aubHqklcMHuhb9thXbX1l
+api:
+  key: 6D891F8203AC437393ADED244AD2AB0A
+appearance: {}
+feature: {}
+gcodeViewer: {}
+plugins:
+  discovery:
+    httpPassword: null
+    httpUsername: null
+    model:
+      description: null
+      name: null
+      number: null
+      serial: null
+      url: null
+      vendor: null
+      vendorUrl: null
+    pathPrefix: null
+    publicHost: null
+    publicPort: null
+    upnpUuid: 87f0cce2-ae8f-4acb-876a-c9fde496e85f
+    zeroConf: []
+printerParameters: {}
+printerProfiles:
+  defaultProfile:
+    axes:
+      e:
+        inverted: false
+        speed: 300
+      x:
+        inverted: false
+        speed: 6000
+      y:
+        inverted: false
+        speed: 6000
+      z:
+        inverted: false
+        speed: 200
+    color: default
+    extruder:
+      count: 1
+      nozzleDiameter: 0.4
+      offsets:
+      - - 0.0
+        - 0.0
+    heatedBed: true
+    id: _default
+    model: Generic RepRap Printer
+    name: Default
+    volume:
+      depth: 200.0
+      formFactor: rectangular
+      height: 200.0
+      origin: center
+      width: 200.0
+serial:
+  baudrate: 250000
+  port: /dev/ttyUSB0
+  timeout: {}
+server:
+  firstRun: false
+  secretKey: pvV9yO3AkvpkqWpBjRte51sqRlXUpeFv
+system:
+  actions:
+  - action: printer on
+    command: gpio write 0 0
+    name: Turn on the printer
+  - action: printer off
+    command: gpio write 0 1
+    confirm: You are about to turn off the printer.
+    name: Turn off the printer
+  - action: shutdown
+    command: sudo shutdown -h now
+    confirm: You are about to shutdown the system.
+    name: Shutdown
+  - action: reboot
+    command: sudo shutdown -r now
+    confirm: You are about to reboot the system
+    name: Reboot
+  - action: restart
+    command: sudo service octoprint restart
+    confirm: You are about to restart OctoPrint
+    name: Restart OctoPrint
+temperature:
+  profiles:
+  - bed: '110'
+    extruder: '230'
+    name: ABS
+webcam:
+  ffmpeg: /usr/bin/avconv
+  snapshot: http://127.0.0.1:8080/?action=snapshot
+  stream: /webcam/?action=stream

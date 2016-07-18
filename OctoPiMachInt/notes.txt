@@ -1,0 +1,22 @@
+octoprint pl;ugin to monitor enclosure/environment
+
+https://github.com/vitormhenrique/OctoPrint-Enclosure
+
+Or create your own using custom controls
+
+http://plugins.octoprint.org/plugins/customControl/
+
+
+AM2320 I2C is non standard......... This will cause you problems if you are not aware of it.
+
+AM2320 is normaly asleep and needs to be initialy iterogated to wake it up, after 3 seconds or so from first interogation if there is no read cycle it goes back to sleep. After a succesful read cycle it goes back to sleep. This means if you attempt to check it is therre using i2cdetect or "gpio i2cd" it will not appear on the first read. do a second immediately after and you will see the address appear. Once woken up it works fine.
+
+Initiliase pigpiod and the gpio pins at boot up add following entrys to roots crontab (crontab -e)
+
+# m h  dom mon dow   command
+@reboot /root/scripts/gpioinit &
+@reboot pigpiod &
+
+
+
+
