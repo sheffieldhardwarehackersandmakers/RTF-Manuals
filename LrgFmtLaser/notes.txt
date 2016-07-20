@@ -1,0 +1,48 @@
+Large Format Laser Documentation
+
+
+Design Brief:-
+
+This design is intended to be used as an inclined bed cutter/engraver so as to reduce the amount of physical space that the device takes up. This does mean there needs to be some additional attention paid to the cutting order of the designs. 
+
+Every effort must also be made to allow ease of use by a single operative.
+
+The laser work area is to be sized to take sheet materials of A0 size (841mm x 1189mm, 33.1" X 46.8") plus a little for comfort.
+
+https://en.wikipedia.org/wiki/Paper_size
+
+If we wanted to be able to engrave/cut standard construction sized sheet materials it might be useful to size it for half sheet capacity (1220 x 1220mm, 48" x 48").
+
+http://www.uk-home-information.co.uk/building-material-sizes.html
+
+As this is greater than the A0 requirement it could be used for both.
+
+
+An additional overall design consideration is that it is desirable to fit two working machines opposite each other in a standard inter-modal shipping container (Internal Dims 2.352M wide x 2.385M High).
+
+This gives us a target (side elevation) design envelope of 0.795M wide x 2.0M high.
+
+Given the impracticalities of adjusting the Z (bed height) axis relative to the work piece it may be advisable to design the cutter with an adjustable nozzle. If the laser tube before the final colimating lense is made telescopic this can be adjusted to accomodate a range of material thickneses, rather than attmepting to move the bed up and down. It might also be advisable to design the machinery in such a way that it can be easily modified later to engrave/cut full sheet materials by passing a full sheet through the half sheet workspace, without needing to cut it first. Although this sort of modification is to be left as a later, perhaps unnecesary excercise.
+
+
+Laser :-
+
+Ideally around 100W CO2 standard PSU and sealed Tube, flying optics. The length of such a tube makes it impossible to mount on the boom. It is likely to need to be mounted diagonaly on the rear of the machine. To allow for the cutting of thicker materials a longer focal length design is desirable.
+
+
+Controls :-
+
+Currently pegged for Laos Laser controller board and control panel. Mainly to maintain compatibility between laser cutters in the hack-space and to best utilise the learnign curve hack space members have already gone through.
+
+
+Kinematics :-
+
+Core XY with stepper motor actuators.
+
+Drive method is to use high tensile stainless steel rigging wire and tensioning methods. Timing belt becomes cost prohibitive over the lengths to be used. As do the usual standard automation components (rack and pinion etc)
+
+Main boom/gantry is better designed to have low mass/inertia, which suggests aluminium extrusion.
+
+
+Framing :-
+
